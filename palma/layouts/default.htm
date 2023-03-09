@@ -1,0 +1,60 @@
+description = "Default layout"
+[session]
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Winter CMS - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Winter CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
+        <link href="{{ ['assets/css/styles.less','assets/css/login.css']|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/swiper-bundle.min.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+        <div class="main">
+            <div class="main_container">
+                <header>
+                    <div class="header_container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 556 85" fill="none">
+                            <clipPath id="clipping">
+                                <path d="M1.99283 0H556V21.5C556 31.9934 551.892 47.696 541.611 49.7977C528.959 52.3842 504.427 54.5 457 54.5C335 54.5 278 42 189.5 63C101 84 37.5 80.5 16 54.5C-5.49998 28.5 1.99283 0 1.99283 0Z" fill="white"/>
+                            </clipPath>
+                        </svg>
+                        <img class="logo" src="{{ 'assets/images/logo.png' | theme }}">
+                    </div>
+                </header>
+                <div class="content">
+                    {% page %}
+                </div>
+              
+            </div>
+          
+        </div>   
+        {% if user %}
+        <footer>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div class="main_btn">2</div>
+        </footer>
+        {% endif %}
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/swiper-bundle.min.js' | theme }}"></script>
+        {% snowboard all %}
+        {% scripts %}
+        {% framework extras %}
+
+    </body>
+</html>

@@ -1,0 +1,282 @@
+@cont-width: 556px;
+@footer-height: 100px;
+@header-height: 77px;
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    height: 77px;
+    filter: drop-shadow(0px 4px 4px #68C4EB);
+}
+.header_container{
+    height: 100%;
+    background:white;
+    clip-path:url(#clipping); 
+    position: relative;
+}
+
+.header_container .logo {
+    position: absolute;
+    right: 10px;
+    height: 46px;
+    top: 2px;
+}
+
+.main {
+    margin: 0 auto;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center; 
+}
+.main_container {
+    width: @cont-width;
+    height:100%;
+    position:relative;
+    border: 2px solid white;
+    overflow-x: hidden;
+}
+
+footer {
+    width:@cont-width;
+    background: white;
+    margin: 0 auto;
+    height:70px;
+    position:fixed;
+    max-width: 100%;
+    z-index: 10;
+    left:0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    bottom:0;
+    border-radius:25px 25px 0 0;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .main_btn {
+        position: absolute;
+        top: -50%;
+        background: linear-gradient(108.73deg, #F9A6C4 23.73%, #F3CDAA 79.34%);
+        box-shadow: 0px 8px 15px rgba(150, 110, 86, 0.2);
+        width:90px;
+        height:90px;
+        border-radius:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+*{
+    font-family: 'Comfortaa';
+}
+
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-color: #b9e3e77a;
+}
+
+h1 {
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 27px;
+    color: #4B7996;
+    text-shadow: 0px 4px 4px rgba(104, 196, 235, 0.25);
+    text-align: center;
+ }
+@input-p-l:30px;
+form input[type=text],form input[type=password],form input[type=email]{
+    position: relative;
+    text-indent: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+form {
+    .enter:hover{
+        background: linear-gradient(180.63deg,#F9A6C4 31.5%,#F3CDAA 99.43%),#FF7EAD;
+    }
+    
+}
+button {cursor: pointer;}
+a {cursor: pointer;}
+
+form input[type=text]::placeholder{
+    color: #7DA0B8;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+form input[type=password]::placeholder{
+    color: #7DA0B8;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+form input[type=email]::placeholder{
+    color: #7DA0B8;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+.mySwiper.swiper {
+    width: ~"calc(100% - 150px)";
+    height: ~"calc(100% - 250px)";
+    overflow: visible !important;
+    margin-top:60px;
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #68C4EB;
+        border-radius: 72px 0;
+        box-shadow: -8px 6px 4px rgba(126, 160, 185, 0.25);
+        .game-link{
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 35px;
+        }
+        h2 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 36px;
+            color:white;
+        }
+        h2,h3{
+            z-index: 10;
+        }
+        
+        h3 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 22px;
+            color:#E6F0FF;
+        }
+        transition: transform 0.3s;
+    }
+
+    .swiper-slide-active {
+        transform: scale(1.1);
+    }
+    
+    .swiper-slide img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination {
+        bottom: -75px;
+        .swiper-pagination-bullet {
+            width: 21px;
+            height: 21px;
+            border: 2px solid #4B7996;
+            background: unset;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #4B7996;
+        }
+    }
+    
+}
+ 
+.content {
+    height: ~"calc(100% - "@footer-height+@header-height~")";
+    max-height: ~"calc(100vh - "@footer-height+@header-height~")";
+}
+
+
+.game1 {
+    .circle {
+        background: linear-gradient(#F9A6C4, #F3CDAA);
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        -webkit-animation: pulsing 6s infinite;
+        animation: pulsing 6s infinite;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin: auto;
+      }
+      .button {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin: auto;
+      }
+      .button1 {
+        border-radius: 10px;
+        width: 90px;
+        height:40px;
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+      }
+    
+      .button1:hover {
+        background-color: #4CAF50; 
+        color: white;
+    }
+      
+      @-webkit-keyframes pulsing {
+        0% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5)
+        }
+        50% {
+          -webkit-transform: scale(1.0, 1.0);
+          transform: scale(1.0, 1.0);
+        }
+        100% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+        }
+      }
+      
+      @keyframes pulsing {
+        0% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5)
+        }
+        50% {
+          -webkit-transform: scale(1.0, 1.0);
+          transform: scale(1.0, 1.0);
+        }
+        100% {
+          -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+        }
+      }
+}
+
