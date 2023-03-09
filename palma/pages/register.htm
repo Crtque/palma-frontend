@@ -38,7 +38,7 @@ layout = "default"
     <a href="{{ 'login'|page }}"><div class="newEnter">Войти</div></a>
     <div><img class="biglogo" src="{{ 'assets/images/biglogo.png' | theme}}"></div>
     {% else %}
-      {% partial 'redirect' %}
+      {% partial 'redirect' url="/" %}
     {% endif %}
   </div>
  

@@ -5,7 +5,7 @@ description = "Default layout"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Winter CMS - {{ this.page.title }}</title>
+        <title>Palma | PersonAL Mental Assistant - {{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="Winter CMS">
@@ -20,8 +20,12 @@ description = "Default layout"
         {% styles %}
     </head>
     <body>
+        {% if (not user) and not(''|page == "https://palma-assistant.space/register" or ''|page == "https://palma-assistant.space/forgot-password" or ''|page == "https://palma-assistant.space/login" or ''|page == "https://palma-assistant.space/mainpage") %}
+           {% partial 'redirect' url="/mainpage" %}
+        {% endif %}
         <div class="main">
             <div class="main_container">
+                {% if user %}
                 <header>
                     <div class="header_container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 556 85" fill="none">
@@ -32,6 +36,7 @@ description = "Default layout"
                         <img class="logo" src="{{ 'assets/images/logo.png' | theme }}">
                     </div>
                 </header>
+                {% endif %}
                 <div class="content">
                     {% page %}
                 </div>
