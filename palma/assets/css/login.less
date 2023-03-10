@@ -9,7 +9,9 @@
 
 }
 
-input[type=text], input[type=password], input[type=email]{
+input[type=text],
+input[type=password],
+input[type=email] {
     background: linear-gradient(110.11deg, rgba(249, 166, 196, 0.13) 22.66%, rgba(243, 205, 170, 0.13) 47.52%);
     box-shadow: 0px 4px 4px rgba(75, 121, 150, 0.25);
     border-radius: 19px;
@@ -58,6 +60,7 @@ input[type=text], input[type=password], input[type=email]{
 .biglogo {
     margin-top: 90px;
     width: 100%;
+    margin-bottom: 70px;
 }
 
 .biglogomain {
@@ -115,4 +118,88 @@ form {
     color: #68C4EB;
     text-align: center;
     padding-top: 5px;
+}
+
+.cities {
+    background: linear-gradient(110.11deg, rgba(104, 196, 235, 0.13) 22.66%, rgba(230, 204, 176, 0.13) 45.32%, rgba(243, 205, 170, 0.13) 47.52%);
+    box-shadow: 0px 4px 4px rgba(75, 121, 150, 0.25);
+    border-radius: 19px;
+    margin-top: 17px;
+    width: 458px;
+    height: 61px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4B7996;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-indent: 10px;
+}
+
+.specialists {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 38px;
+    width: 475px;
+    height: 198px;
+    max-width: 100%;
+    margin-top: 21px;
+
+    button {
+        width: 256px;
+        max-width: 100%;
+        height: 57px;
+        margin-top: 15px;
+        margin-left: 60px;
+        background: #FEA24D;
+        border-radius: 16px;
+        border: none;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        transition: background 0.3s;
+    
+    }
+    button:hover {
+        background:#ff8c20 ;
+    }
+}
+
+.nameofspecialists {
+    display: flex;
+    padding-top: 15px;
+    padding-left: 60px;
+
+    .info {
+        margin: 15px;
+
+        h1 {
+            font-family: 'Comfortaa';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 25px;
+            color: #161B1F;
+        }
+
+        div {
+            font-family: 'Comfortaa';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 13px;
+            color: #4C5257;
+            mix-blend-mode: normal;
+            opacity: 0.6;
+            text-align: left;
+            margin-top:5px;
+        }
+    }
 }

@@ -15,7 +15,7 @@ description = "Default layout"
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
-        <link href="{{ ['assets/css/styles.less','assets/css/login.css']|theme }}" rel="stylesheet">
+        <link href="{{ ['assets/css/styles.less','assets/css/login.less']|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/swiper-bundle.min.css'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
@@ -46,11 +46,15 @@ description = "Default layout"
         </div>   
         {% if user %}
         <footer>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div class="main_btn">2</div>
+            <div class="left">
+                <div><a href="{{ 'home'|page }}"><img class="icon" src='{{ 'assets/images/puzzle.svg' | theme }}'/></a></div>
+                <div><a href="{{ 'specialist'|page }}"><img class="icon" src='{{ 'assets/images/info.svg' | theme }}'/></a></div>
+            </div>
+            <div class="right">
+                <div><a href="{{ ''|page }}"><img class="icon" src='{{ 'assets/images/chat.svg' | theme }}'/></a></div>
+                <div><a href="{{ ''|page }}"><img class="icon" src='{{ 'assets/images/person.svg' | theme }}'/></a></div>
+            </div>
+            <div class="main_btn"><a href="{{ ''|page }}"><img src='{{ 'assets/images/book.svg' | theme }}'/></a></div>
         </footer>
         {% endif %}
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
